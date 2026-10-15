@@ -253,8 +253,8 @@ main {
 
 .hero-meta .label-wrap {
   float: right;
-  width: 140px;
-  margin: -6px 4px 0 14px;
+  width: 150px;
+  margin: -64px 4px 0 14px;
   transform: rotate(4deg);
 }
 
@@ -537,7 +537,7 @@ main {
   .nav-title { font-size: 20px; }
   .hero { padding-top: 32px; }
   .hero-meta { max-width: 640px; margin: 0 auto; }
-  .hero-meta .label-wrap { width: 170px; }
+  .hero-meta .label-wrap { width: 180px; margin-top: -80px; }
 
   .footer-inner {
     max-width: 880px;
@@ -579,7 +579,6 @@ main {
     display: flex;
     flex-direction: column;
   }
-  .hero-meta .label-wrap { order: -1; }
   .hero-meta .label-wrap {
     float: none;
     width: 170px;
