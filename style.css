@@ -237,6 +237,56 @@ main {
 
 .poster { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 
+/* Английская плашка поверх русского названия на афише (только /en/).
+ * Размеры — от ширины афиши. */
+.poster-frame { position: relative; container-type: inline-size; }
+
+.poster-note {
+  position: absolute;
+  left: 15%;
+  top: 24%;
+  width: 70%;
+  height: 58%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6cqw;
+  background: var(--grain), #e6c29e;
+  border-radius: 2.5cqw;
+  outline: 0.25cqw dashed rgba(43, 18, 24, 0.55);
+  outline-offset: -1.6cqw;
+  box-shadow: 0 0.4cqw 1.6cqw rgba(43, 18, 24, 0.35);
+  transform: rotate(-1.2deg);
+  color: var(--ink);
+  text-align: center;
+}
+
+.poster-note-title {
+  font: 900 9cqw/1.04 var(--display);
+  letter-spacing: -0.01em;
+}
+
+.poster-note-title > span {
+  display: inline-block;
+  padding: 0 1.2cqw;
+  background: #f06ea9;
+}
+
+.poster-note-sub {
+  font: 800 italic 3.2cqw/1.1 var(--display);
+  padding: 0.6cqw 4cqw;
+  border-top: 0.25cqw solid var(--ink);
+  border-bottom: 0.25cqw solid var(--ink);
+}
+
+.poster-note-kicker {
+  font: 800 2.4cqw/1 var(--display);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  padding-left: 0.4em;
+}
+
 .hero-date {
   font: 600 clamp(25px, 7.3vw, 32px)/1.1 var(--hand);
   color: var(--wine);
