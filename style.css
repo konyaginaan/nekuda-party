@@ -224,8 +224,8 @@ main {
 
 .hero-meta .label-wrap {
   float: right;
-  width: 150px;
-  margin: -64px 4px 0 14px;
+  width: 140px;
+  margin: -6px 4px 0 14px;
   transform: rotate(4deg);
 }
 
@@ -490,21 +490,8 @@ main {
   .nav { height: 64px; }
   .nav-title { font-size: 20px; }
   .hero { padding-top: 32px; }
-
-  .hero-meta {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 48px;
-    max-width: 760px;
-    margin: 0 auto;
-  }
-  .hero-meta .label-wrap {
-    float: none;
-    flex: none;
-    width: 210px;
-    margin: -120px 0 0;
-  }
-  .hero-text { flex: 1; padding-top: 6px; }
+  .hero-meta { max-width: 640px; margin: 0 auto; }
+  .hero-meta .label-wrap { width: 170px; }
 
   .footer-inner {
     max-width: 880px;
@@ -528,6 +515,32 @@ main {
 
 @media (min-width: 960px) {
   .section { padding: 48px 0; }
+
+  /* Первый экран: афиша слева, справа бирка, дата и подзаголовок */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    gap: 56px;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  .poster-frame { margin: 0; }
+  .hero-meta {
+    max-width: none;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-meta .label-wrap { order: -1; }
+  .hero-meta .label-wrap {
+    float: none;
+    width: 170px;
+    margin: 0 auto 26px;
+  }
+  .hero-date { font-size: 32px; margin-bottom: 12px; }
+  .hero-lead { font-size: 20px; }
 
   /* Блок и наклейка — в две колонки, наклейка по центру высоты блока */
   .has-sticker {
