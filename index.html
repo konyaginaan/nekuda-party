@@ -5,88 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мне некуда это надеть</title>
   <meta name="description" content="Выгуляйте вещи, которые давно ждут своего часа, и поиграйте в настолки.">
+  <meta name="theme-color" content="#F4E6DA">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Мне некуда это надеть">
   <meta property="og:description" content="Выгуляйте вещи, которые давно ждут своего часа, и поиграйте в настолки.">
-  <!-- og.jpg положит организатор (лучше 1200×630) -->
   <meta property="og:image" content="https://konyaginaan.github.io/nekuda-party/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://konyaginaan.github.io/nekuda-party/">
+  <meta name="twitter:card" content="summary_large_image">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Manrope:wght@400;600;700;800&family=Playfair+Display:wght@800;900&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Иконки в духе Lucide: обводка 1.75, цвет задаёт CSS -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-dice" viewBox="0 0 24 24"><rect width="12" height="12" x="2" y="10" rx="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01"/><path d="M10 14h.01"/><path d="M15 6h.01"/><path d="M18 9h.01"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+    <symbol id="i-dinner" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+    <symbol id="i-cat" viewBox="0 0 24 24"><path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-rain" viewBox="0 0 24 24"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 14v6"/><path d="M8 14v6"/><path d="M12 16v6"/></symbol>
+    <!-- Значок ухода «не гладить»: утюг, перечёркнутый крест-накрест -->
+    <symbol id="i-no-iron" viewBox="0 0 24 24"><path d="M3 18h18l-1.6-6.4A4 4 0 0 0 15.5 8.5H7"/><path d="M5 8.5h5"/><path d="M5 4l14 18"/><path d="M19 4 5 22"/></symbol>
+  </svg>
+
   <header class="site-header">
     <nav class="nav">
       <a class="nav-title" href="#top">Мне некуда это надеть</a>
-      <a class="nav-link" href="https://maps.app.goo.gl/ikmV4wj7DfF3Gz9P6?g_st=ipc" target="_blank" rel="noopener">Локация</a>
+      <a class="nav-link" href="https://maps.app.goo.gl/ikmV4wj7DfF3Gz9P6?g_st=ipc" target="_blank" rel="noopener">
+        <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Локация
+      </a>
     </nav>
   </header>
 
   <main>
 
     <section class="hero section" id="top">
-      <h1>Мне некуда это надеть</h1>
+      <!-- Название нарисовано на афише; заголовок остаётся для поиска и экранных дикторов -->
+      <h1 class="visually-hidden">Мне некуда это надеть</h1>
+      <figure class="poster-frame">
+        <picture>
+          <source type="image/webp" srcset="poster-800.webp 800w, poster-1200.webp 1200w" sizes="(min-width: 672px) 608px, calc(100vw - 32px)">
+          <img class="poster" src="poster.jpg" width="1200" height="800" alt="Афиша вечеринки «Мне некуда это надеть»">
+        </picture>
+      </figure>
       <p class="hero-date"><time datetime="2026-10-18T16:00">Воскресенье, 18 октября · 16:00</time></p>
       <p class="hero-lead">Выгуляйте вещи, которые давно ждут своего часа, и поиграйте в настолки.</p>
-      <!-- poster.jpg положит организатор -->
-      <img class="poster" src="poster.jpg" alt="Афиша вечеринки «Мне некуда это надеть»">
     </section>
+
+    <div class="ribbon" aria-hidden="true"></div>
 
     <section class="section" id="dress-code">
       <h2>Дресс-код</h2>
-      <p>Всё, что обычно некуда надеть. Слишком нарядное, слишком странное, слишком смелое.</p>
+      <p class="dress-main">Всё, что обычно <span class="marker">некуда надеть</span>. Слишком нарядное, слишком странное, слишком смелое.</p>
       <p>Покупать ничего не нужно: вся идея в том, чтобы выгулять то, что пылится, или составить необычный образ из того, что уже есть.</p>
-      <p>Нет наряда или не хочется его придумывать? Приходите в чём удобно, главное — повеселиться и отдохнуть.</p>
+      <p class="muted">Нет наряда или не хочется его придумывать? Приходите в чём удобно, главное — повеселиться и отдохнуть.</p>
     </section>
 
-    <section class="section label" id="composition" aria-labelledby="composition-title">
-      <h2 class="label-title" id="composition-title">СОСТАВ / COMPOSITION</h2>
-      <table class="label-table">
-        <tbody>
-          <tr><td class="label-pct">100%</td><td class="label-item">аутфиты</td></tr>
-          <tr><td class="label-pct">100%</td><td class="label-item">настолки</td></tr>
-          <tr><td class="label-pct">100%</td><td class="label-item">общение</td></tr>
-        </tbody>
-      </table>
-      <p class="label-total">ИТОГО: 300% отличного вечера</p>
-      <!-- Можно сократить до «УХОД: кормить ужином» — решит организатор -->
-      <p class="label-care">УХОД: кормить ужином<span class="label-care-extra">, не гладить против шерсти</span></p>
+    <section class="section label-section" id="composition" aria-labelledby="composition-title">
+      <div class="label-wrap">
+        <svg class="stamp" viewBox="0 0 100 100" aria-hidden="true">
+          <defs><path id="stamp-ring" d="M50 50 m-37 0 a37 37 0 1 1 74 0 a37 37 0 1 1 -74 0"/></defs>
+          <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="3"/>
+          <circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text font-family="Manrope, sans-serif" font-weight="800" font-size="10.5" letter-spacing="1.2" fill="currentColor">
+            <textPath href="#stamp-ring" textLength="225" lengthAdjust="spacingAndGlyphs">НЕКУДА НАДЕТЬ • НЕКУДА НАДЕТЬ • </textPath>
+          </text>
+          <text x="50" y="55" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="14" fill="currentColor">300%</text>
+        </svg>
+        <div class="label">
+          <h2 class="label-title" id="composition-title">СОСТАВ / COMPOSITION</h2>
+          <table class="label-table">
+            <tbody>
+              <tr><td class="label-pct">100%</td><td class="label-item">аутфиты</td></tr>
+              <tr><td class="label-pct">100%</td><td class="label-item">настолки</td></tr>
+              <tr><td class="label-pct">100%</td><td class="label-item">общение</td></tr>
+            </tbody>
+          </table>
+          <p class="label-total">ИТОГО: 300% отличного вечера</p>
+          <!-- Можно сократить до «УХОД: кормить ужином» — убрать span целиком, значок уйдёт вместе с ним -->
+          <p class="label-care">УХОД: кормить ужином<span class="label-care-extra">, не гладить против шерсти <svg class="care-ico" aria-hidden="true"><use href="#i-no-iron"/></svg></span></p>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="program">
       <h2>Что будет</h2>
       <ul class="program-list">
-        <li><strong>Настолки.</strong> Каждая победа приносит одну шмотковалюту.</li>
-        <li><strong>Мини-маркет.</strong> Обмен вещей на шмотковалюту.</li>
-        <li><strong>Ужин.</strong> С меня куриные грудки в песто с рисом и овощи, а на десерт запечённые груши со сладким сырным соусом.</li>
-        <li><strong>Благотворительная барахолка.</strong> Вещи до 5 €, вся выручка идёт кошачьему приюту Tala Cats.</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-dice"/></svg><p><strong>Настолки.</strong> Каждая победа приносит одну шмотковалюту.</p></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-swap"/></svg><p><strong>Мини-маркет.</strong> Обмен вещей на шмотковалюту.</p></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-dinner"/></svg><p><strong>Ужин.</strong> С меня куриные грудки в песто с рисом и овощи, а на десерт запечённые груши со сладким сырным соусом.</p></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-cat"/></svg><p><strong>Благотворительная барахолка.</strong> Вещи до 5 €, вся выручка идёт кошачьему приюту Tala Cats.</p></li>
       </ul>
     </section>
 
     <section class="section" id="bring">
-      <h2>Что можно принести</h2>
-      <p class="note">(не обязательно, по желанию)</p>
-      <ul class="bring-list">
-        <li>снеки и напитки на свой вкус</li>
-        <li>что-нибудь небольшое на мини-маркет из того, что лежит без дела</li>
-        <li>1–2 ненужные вещи для благотворительной барахолки</li>
-        <li>настолки</li>
-        <li>гирлянды и огоньки</li>
-        <li>что-то тёплое: вечером может быть прохладно</li>
-      </ul>
+      <div class="panel">
+        <h2>Что можно принести</h2>
+        <p class="note">(не обязательно, по желанию)</p>
+        <ul class="bring-list">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>снеки и напитки на свой вкус</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>что-нибудь небольшое на мини-маркет из того, что лежит без дела</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>1–2 ненужные вещи для благотворительной барахолки</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>настолки</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>гирлянды и огоньки</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>что-то тёплое: вечером может быть прохладно</li>
+        </ul>
+      </div>
     </section>
 
     <section class="section important" id="rsvp">
+      <svg class="ico" aria-hidden="true"><use href="#i-rain"/></svg>
       <p>Если пойдёт дождь, переберёмся в дом, а там места меньше, поэтому обязательно напишите мне в личку, если придёте.</p>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <p class="footer-date"><time datetime="2026-10-18T16:00">Воскресенье, 18 октября · 16:00</time></p>
-    <a class="button" href="https://maps.app.goo.gl/ikmV4wj7DfF3Gz9P6?g_st=ipc" target="_blank" rel="noopener">Локация</a>
+    <div class="footer-inner">
+      <p class="footer-date"><time datetime="2026-10-18T16:00">Воскресенье, 18 октября · 16:00</time></p>
+      <a class="button" href="https://maps.app.goo.gl/ikmV4wj7DfF3Gz9P6?g_st=ipc" target="_blank" rel="noopener">
+        <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Локация
+      </a>
+    </div>
   </footer>
 
 </body>
