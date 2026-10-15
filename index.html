@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Manrope:wght@400;600;700;800&family=Playfair+Display:wght@800;900&display=swap">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -62,92 +62,94 @@
 
     <div class="ribbon" aria-hidden="true"></div>
 
-    <div class="duo">
-
-    <section class="section" id="dress-code">
-      <h2>Дресс-код</h2>
-      <p class="dress-main">Всё, что обычно <span class="marker">некуда надеть</span>. Слишком нарядное, слишком странное, слишком смелое для повседневности.</p>
-      <p>Покупать ничего не нужно: вся идея в том, чтобы выгулять то, что пылится, или составить необычный образ из того, что уже есть.</p>
-      <p class="muted">Нет наряда или не хочется его придумывать? Приходите в чём удобно, главное — повеселиться и отдохнуть.</p>
-      <figure class="sticker sticker-right">
-        <a href="img/vintage-1100.webp" target="_blank" rel="noopener"><img src="img/vintage-640.webp" srcset="img/vintage-640.webp 640w, img/vintage-1100.webp 1100w" sizes="(min-width: 760px) 460px, 86vw" width="1533" height="1001" loading="lazy" decoding="async" alt="Наклейка «Жрец/жрица винтажа»: «Знает, как вернуться в прошлое, не дожидаясь изобретения машины времени. Экип: стилизация под любую эпоху, любые винтажные/напоминающие винтажные вещи». Пара в розовой шубе, джинсах со стразами и яркой ветровке среди пластинок, кассет и диско-шара."></a>
+    <section class="section has-sticker sticker-right" id="dress-code">
+      <div class="section-body">
+        <h2>Дресс-код</h2>
+        <p class="dress-main">Всё, что обычно <span class="marker">некуда надеть</span>. Слишком нарядное, слишком странное слишком смелое для повседневности.</p>
+        <p>Покупать ничего не нужно: вся идея в том, чтобы выгулять то, что пылится, или составить необычный образ из того, что уже есть.</p>
+        <p class="muted">Нет наряда или не хочется его придумывать? Приходите в чём удобно, главное — повеселиться и отдохнуть.</p>
+      </div>
+      <figure class="sticker">
+        <a href="img/vintage-1100.webp" target="_blank" rel="noopener"><img src="img/vintage-640.webp" srcset="img/vintage-640.webp 640w, img/vintage-1100.webp 1100w" sizes="(min-width: 960px) 400px, calc(100vw - 32px)" width="1533" height="1001" loading="lazy" decoding="async" alt="Наклейка «Жрец/жрица винтажа»: «Знает, как вернуться в прошлое, не дожидаясь изобретения машины времени. Экип: стилизация под любую эпоху, любые винтажные/напоминающие винтажные вещи». Пара в розовой шубе, джинсах со стразами и яркой ветровке среди пластинок, кассет и диско-шара."></a>
       </figure>
     </section>
 
-    <section class="section label-section" id="composition" aria-labelledby="composition-title">
-      <div class="label-wrap">
-        <svg class="stamp" width="80" height="80" viewBox="0 0 100 100" aria-hidden="true">
-          <defs><path id="stamp-ring" d="M50 50 m-37 0 a37 37 0 1 1 74 0 a37 37 0 1 1 -74 0"/></defs>
-          <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="3"/>
-          <circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <text font-family="Manrope, sans-serif" font-weight="800" font-size="10.5" letter-spacing="1.2" fill="currentColor">
-            <textPath href="#stamp-ring" textLength="225" lengthAdjust="spacingAndGlyphs">НЕКУДА НАДЕТЬ • НЕКУДА НАДЕТЬ • </textPath>
-          </text>
-          <text x="50" y="55" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="14" fill="currentColor">300%</text>
-        </svg>
-        <div class="label">
-          <h2 class="label-title" id="composition-title">СОСТАВ / COMPOSITION</h2>
-          <table class="label-table">
-            <tbody>
-              <tr><td class="label-pct">100%</td><td class="label-item">аутфиты</td></tr>
-              <tr><td class="label-pct">100%</td><td class="label-item">настолки</td></tr>
-              <tr><td class="label-pct">100%</td><td class="label-item">общение</td></tr>
-            </tbody>
-          </table>
-          <p class="label-total">ИТОГО: 300% отличного вечера</p>
-          <!-- Можно сократить до «УХОД: кормить ужином» — убрать span целиком, значок уйдёт вместе с ним -->
-          <p class="label-care">УХОД: кормить ужином<span class="label-care-extra">, не гладить против шерсти <svg class="care-ico" width="20" height="20" aria-hidden="true"><use href="#i-no-iron"/></svg></span></p>
+    <section class="section label-section has-sticker sticker-left" id="composition" aria-labelledby="composition-title">
+      <div class="section-body">
+        <div class="label-wrap">
+          <svg class="stamp" width="80" height="80" viewBox="0 0 100 100" aria-hidden="true">
+            <defs><path id="stamp-ring" d="M50 50 m-37 0 a37 37 0 1 1 74 0 a37 37 0 1 1 -74 0"/></defs>
+            <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="3"/>
+            <circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <text font-family="Manrope, sans-serif" font-weight="800" font-size="10.5" letter-spacing="1.2" fill="currentColor">
+              <textPath href="#stamp-ring" textLength="225" lengthAdjust="spacingAndGlyphs">НЕКУДА НАДЕТЬ • НЕКУДА НАДЕТЬ • </textPath>
+            </text>
+            <text x="50" y="55" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="14" fill="currentColor">300%</text>
+          </svg>
+          <div class="label">
+            <h2 class="label-title" id="composition-title">СОСТАВ / COMPOSITION</h2>
+            <table class="label-table">
+              <tbody>
+                <tr><td class="label-pct">100%</td><td class="label-item">аутфиты</td></tr>
+                <tr><td class="label-pct">100%</td><td class="label-item">настолки</td></tr>
+                <tr><td class="label-pct">100%</td><td class="label-item">общение</td></tr>
+              </tbody>
+            </table>
+            <p class="label-total">ИТОГО: 300% отличного вечера</p>
+            <!-- Можно сократить до «УХОД: кормить ужином» — убрать span целиком, значок уйдёт вместе с ним -->
+            <p class="label-care">УХОД: кормить ужином<span class="label-care-extra">, не гладить против шерсти <svg class="care-ico" width="20" height="20" aria-hidden="true"><use href="#i-no-iron"/></svg></span></p>
+          </div>
         </div>
       </div>
+      <figure class="sticker">
+        <a href="img/cinema-1100.webp" target="_blank" rel="noopener"><img src="img/cinema-640.webp" srcset="img/cinema-640.webp 640w, img/cinema-1100.webp 1100w" sizes="(min-width: 960px) 400px, calc(100vw - 32px)" width="1536" height="1014" loading="lazy" decoding="async" alt="Наклейка «Киноман(ка) от души»: «Не просто смотрит кино, но пропускает через себя персонажей. Экип: атрибуты любимых персонажей». Пара в образах Круэллы и Гарри Поттера с далматинцем и совой."></a>
+      </figure>
     </section>
 
-    </div>
-
-    <figure class="sticker sticker-right">
-      <a href="img/cinema-1100.webp" target="_blank" rel="noopener"><img src="img/cinema-640.webp" srcset="img/cinema-640.webp 640w, img/cinema-1100.webp 1100w" sizes="(min-width: 760px) 460px, 86vw" width="1536" height="1014" loading="lazy" decoding="async" alt="Наклейка «Киноман(ка) от души»: «Не просто смотрит кино, но пропускает через себя персонажей. Экип: атрибуты любимых персонажей». Пара в образах Круэллы и Гарри Поттера с далматинцем и совой."></a>
-    </figure>
-
-    <section class="section" id="program">
-      <h2>Что будет</h2>
-      <ul class="program-list">
-        <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-dice"/></svg><p><strong>Настолки.</strong> Каждая победа приносит одну шмотковалюту.</p></li>
-        <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-swap"/></svg><p><strong>Мини-маркет.</strong> Обмен вещей на шмотковалюту.</p></li>
-        <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-dinner"/></svg><p><strong>Ужин.</strong> С меня куриные грудки в песто с рисом и овощи, а на десерт запечённые груши со сладким сырным соусом.</p></li>
-        <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-cat"/></svg><p><strong>Благотворительная барахолка.</strong> Вещи до 5 €, вся выручка идёт кошачьему приюту Tala Cats.</p></li>
-      </ul>
-    </section>
-
-    <figure class="sticker sticker-left">
-      <a href="img/street-1100.webp" target="_blank" rel="noopener"><img src="img/street-640.webp" srcset="img/street-640.webp 640w, img/street-1100.webp 1100w" sizes="(min-width: 760px) 460px, 86vw" width="1536" height="1024" loading="lazy" decoding="async" alt="Наклейка «Стритстайлер»: «80 lvl миксования вещей, чувствует цвет и форму как боженька, стократный чемпион по стилизации фигни любого калибра. Экип: нестандартные решения, дикие комбинации. Состав: 50% смелости и 50% дерзости». Пара в леопарде, бусах, платформах и плюшевой шапке."></a>
-    </figure>
-
-    <section class="section" id="bring">
-      <div class="panel">
-        <h2>Что можно принести</h2>
-        <p class="note">(не обязательно, по желанию)</p>
-        <ul class="bring-list">
-          <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>снеки и напитки на свой вкус</li>
-          <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>что-нибудь небольшое на мини-маркет из того, что лежит без дела</li>
-          <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>1–2 ненужные вещи для благотворительной барахолки</li>
-          <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>настолки</li>
-          <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>гирлянды и огоньки</li>
-          <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>что-то тёплое: вечером может быть прохладно</li>
+    <section class="section has-sticker sticker-right" id="program">
+      <div class="section-body">
+        <h2>Что будет</h2>
+        <ul class="program-list">
+          <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-dice"/></svg><p><strong>Настолки.</strong> Каждая победа приносит одну шмотковалюту.</p></li>
+          <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-swap"/></svg><p><strong>Мини-маркет.</strong> Обмен вещей на шмотковалюту.</p></li>
+          <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-dinner"/></svg><p><strong>Ужин.</strong> С меня куриные грудки в песто с рисом и овощи, а на десерт запечённые груши со сладким сырным соусом.</p></li>
+          <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-cat"/></svg><p><strong>Благотворительная барахолка.</strong> Вещи до 5 €, вся выручка идёт кошачьему приюту Tala Cats.</p></li>
         </ul>
       </div>
+      <figure class="sticker">
+        <a href="img/street-1100.webp" target="_blank" rel="noopener"><img src="img/street-640.webp" srcset="img/street-640.webp 640w, img/street-1100.webp 1100w" sizes="(min-width: 960px) 400px, calc(100vw - 32px)" width="1536" height="1024" loading="lazy" decoding="async" alt="Наклейка «Стритстайлер»: «80 lvl миксования вещей, чувствует цвет и форму как боженька, стократный чемпион по стилизации фигни любого калибра. Экип: нестандартные решения, дикие комбинации. Состав: 50% смелости и 50% дерзости». Пара в леопарде, бусах, платформах и плюшевой шапке."></a>
+      </figure>
     </section>
 
-    <figure class="sticker sticker-right">
-      <a href="img/shopaholic-1100.webp" target="_blank" rel="noopener"><img src="img/shopaholic-640.webp" srcset="img/shopaholic-640.webp 640w, img/shopaholic-1100.webp 1100w" sizes="(min-width: 760px) 460px, 86vw" width="1521" height="1014" loading="lazy" decoding="async" alt="Наклейка «Благородная(ый) шопогольвица/шопогольвец» с надписью «Сердце сказало: бери»: «Обзаводится одеждой по зову сердца, но в джунглях повседневности не всегда находит, куда этот зов ведёт. Экстравагантные, удивительные, интересные и кринжовые вещи, которые выходят за пределы повседневной суеты». Пара с охапками нарядов в руках."></a>
-    </figure>
-
-    <section class="section important" id="rsvp">
-      <svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-rain"/></svg>
-      <p>Если пойдёт дождь, переберёмся в дом, а там места меньше, поэтому обязательно напишите мне в личку, если придёте.</p>
+    <section class="section has-sticker sticker-left" id="bring">
+      <div class="section-body">
+        <div class="panel">
+          <h2>Что можно принести</h2>
+          <p class="note">(не обязательно, по желанию)</p>
+          <ul class="bring-list">
+            <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>снеки и напитки на свой вкус</li>
+            <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>что-нибудь небольшое на мини-маркет из того, что лежит без дела</li>
+            <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>1–2 ненужные вещи для благотворительной барахолки</li>
+            <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>настолки</li>
+            <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>гирлянды и огоньки</li>
+            <li><svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-check"/></svg>что-то тёплое: вечером может быть прохладно</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="sticker">
+        <a href="img/shopaholic-1100.webp" target="_blank" rel="noopener"><img src="img/shopaholic-640.webp" srcset="img/shopaholic-640.webp 640w, img/shopaholic-1100.webp 1100w" sizes="(min-width: 960px) 400px, calc(100vw - 32px)" width="1521" height="1014" loading="lazy" decoding="async" alt="Наклейка «Благородная(ый) шопогольвица/шопогольвец» с надписью «Сердце сказало: бери»: «Обзаводится одеждой по зову сердца, но в джунглях повседневности не всегда находит, куда этот зов ведёт. Экстравагантные, удивительные, интересные и кринжовые вещи, которые выходят за пределы повседневной суеты». Пара с охапками нарядов в руках."></a>
+      </figure>
     </section>
 
-    <figure class="sticker sticker-left">
-      <a href="img/dreamer-1100.webp" target="_blank" rel="noopener"><img src="img/dreamer-640.webp" srcset="img/dreamer-640.webp 640w, img/dreamer-1100.webp 1100w" sizes="(min-width: 760px) 460px, 86vw" width="1521" height="947" loading="lazy" decoding="async" alt="Наклейка «Воспаривший(ая) над формальностью»: «Вне времени и вне пространства, вне логики и вне моды. Это вообще человек?» Пара в пушистых кигуруми кошки и динозавра среди книг, лавовой лампы и глобусов."></a>
-    </figure>
+    <section class="section has-sticker sticker-right" id="rsvp">
+      <div class="section-body important">
+        <svg class="ico" width="22" height="22" aria-hidden="true"><use href="#i-rain"/></svg>
+        <p>Если пойдёт дождь, переберёмся в дом, а там места меньше, поэтому обязательно напишите мне в личку, если придёте.</p>
+      </div>
+      <figure class="sticker">
+        <a href="img/dreamer-1100.webp" target="_blank" rel="noopener"><img src="img/dreamer-640.webp" srcset="img/dreamer-640.webp 640w, img/dreamer-1100.webp 1100w" sizes="(min-width: 960px) 400px, calc(100vw - 32px)" width="1521" height="947" loading="lazy" decoding="async" alt="Наклейка «Воспаривший(ая) над формальностью»: «Вне времени и вне пространства, вне логики и вне моды. Это вообще человек?» Пара в пушистых кигуруми кошки и динозавра среди книг, лавовой лампы и глобусов."></a>
+      </figure>
+    </section>
 
   </main>
 
