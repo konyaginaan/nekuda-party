@@ -349,56 +349,33 @@ main {
   z-index: 2;
 }
 
-/* ── Кем прийти: наклейки с образами ─────────────────────── */
-
-.looks h2 { margin-bottom: 18px; }
-
-.looks-list {
-  list-style: none;
-  margin: 0 -16px;
-  padding: 6px 16px 8px;
-  display: flex;
-  gap: 4px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 16px;
-  overscroll-behavior-x: contain;
-  scrollbar-width: none;
-}
-
-.looks-list::-webkit-scrollbar { display: none; }
+/* ── Наклейки-персонажи: разбросаны между разделами ───────
+ * Не отдельный блок, а примеры по ходу страницы: то справа, то слева, вкось. */
 
 .sticker {
-  flex: 0 0 90%;
-  scroll-snap-align: start;
+  width: 86%;
+  margin: 4px 0 4px -6px;
   filter: drop-shadow(0 6px 12px rgba(43, 18, 24, 0.16));
 }
 
 .sticker a { display: block; }
-.sticker img { width: 100%; height: auto; }
+.sticker img { width: 100%; height: auto; transform: rotate(-3deg); }
 
-/* Наклейки чуть вкось, как налепленные руками */
-.sticker:nth-child(odd) img { transform: rotate(-1.5deg); }
-.sticker:nth-child(even) img { transform: rotate(1.2deg); }
+.sticker-right { margin-left: auto; margin-right: -6px; }
+.sticker-right img { transform: rotate(2.5deg); }
+
+/* Внутри дресс-кода — под текстом */
+#dress-code .sticker { margin-top: 22px; margin-bottom: -8px; }
 
 @media (min-width: 760px) {
-  #looks { max-width: none; }
-  .looks h2 { text-align: center; margin-bottom: 26px; }
-  .looks-list {
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px 32px;
+  .sticker {
+    width: 460px;
+    margin: -12px 0 -12px 4%;
   }
-  .sticker:last-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: calc(50% - 16px);
-  }
+  .sticker-right { margin-left: auto; margin-right: 4%; }
   .sticker img { transition: transform 0.2s ease; }
-  .sticker:hover img { transform: rotate(0) scale(1.02); }
+  .sticker a:hover img { transform: rotate(0) scale(1.03); }
+  #dress-code .sticker { width: 88%; margin: 24px 0 0 auto; }
 }
 
 /* ── Что будет ───────────────────────────────────────────── */
