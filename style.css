@@ -169,6 +169,35 @@ p:last-child { margin-bottom: 0; }
 
 .nav-link .ico { width: 18px; height: 18px; }
 
+.nav-actions {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Переключатель языка: тихий, без рамки */
+.lang-switch {
+  display: inline-grid;
+  place-items: center;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 999px;
+  color: var(--wine);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.lang-switch:hover { background: var(--paper-2); }
+
+/* На узком экране у «Локации» остаётся только значок */
+@media (max-width: 399px) {
+  .nav-link { padding: 0; width: 40px; justify-content: center; }
+  .nav-link-text { display: none; }
+}
+
 /* ── Колонка и разделы ───────────────────────────────────── */
 
 main {
@@ -420,6 +449,13 @@ main {
 
 .important .ico { width: 26px; height: 26px; margin-top: 1px; }
 
+/* ── Чат ─────────────────────────────────────────────────── */
+
+.chat { text-align: center; padding: 28px 22px; }
+.chat h2 { margin-bottom: 10px; }
+.chat p { margin: 0 auto 20px; max-width: 32em; }
+.chat-ico { width: 30px; height: 30px; margin-bottom: 8px; }
+
 /* ── Подвал ──────────────────────────────────────────────── */
 
 .site-footer {
@@ -472,6 +508,16 @@ main {
 }
 
 .button .ico { color: var(--paper-2); }
+
+/* Вторая кнопка — контурная */
+.button-ghost {
+  background: transparent;
+  color: var(--wine);
+  border: 1.5px solid var(--wine);
+}
+.button-ghost .ico { color: var(--wine); }
+.button-ghost:hover { background: var(--paper); }
+.footer-cta .button + .button { margin-top: 10px; }
 
 .button:hover { background: var(--wine-dark); }
 .button:active { transform: translateY(1px) scale(0.98); }
